@@ -58,7 +58,7 @@ int diag1(int c) {
 			if(board[8] == 2)
 				return 8;
 
-      return 1;  
+      return 1;
 		}
     return -1;
 }
@@ -230,30 +230,93 @@ void main() {
             printf("\n");
 		}
 
-		if((row(27) != -1) || (row(125) !=-1)) {
-		    printf("Game over!");
-			return;
-		}
+    if((row(27) != -1) || (row(125) !=-1)) {
 
-		if((column(27) != -1) || (column(125) !=-1)) {
-		    printf("Game over!");
-			return;
-		}
+            printf("\n");
+     	      printf("Game over!");
 
-		if((diag1(27) != -1) || (diag1(125) !=-1)) {
-		    printf("Game over!");
-			return;
-		}
+            if (row(27) != -1) {
 
-		if((diag2(27) != -1) || (diag2(125) !=-1)) {
-		    printf("Game over!");
-			return;
-		}
+                printf("\n");
+                printf("'X' Wins\n");
+            }
 
+            if (row(125) != -1) {
+
+                printf("\n");
+                printf("'O' Wins\n");
+            }
+
+            printf("\n");
+            return;
+        }
+
+    if((column(27) != -1) || (column(125) !=-1)) {
+
+        printf("\n");
+ 	      printf("Game over!");
+
+        if (column(27) != -1) {
+
+            printf("\n");
+            printf("'X' Wins\n");
+        }
+
+        if (column(125) != -1) {
+
+            printf("\n");
+            printf("'O' Wins\n");
+        }
+
+        printf("\n");
+        return;
+    }
+
+    if((diag1(27) != -1) || (diag1(125) !=-1)) {
+
+        printf("\n");
+ 	      printf("Game over!");
+
+        if (diag1(27) != -1) {
+
+            printf("\n");
+            printf("'X' Wins\n");
+        }
+
+        if (diag1(125) != -1) {
+
+            printf("\n");
+            printf("'O' Wins\n");
+        }
+
+        printf("\n");
+        return;
+    }
+
+    if((diag2(27) != -1) || (diag2(125) !=-1)) {
+
+        printf("\n");
+ 	      printf("Game over!");
+
+        if (diag2(27) != -1) {
+
+            printf("\n");
+            printf("'X' Wins\n");
+        }
+
+        if (diag2(125) != -1) {
+
+            printf("\n");
+            printf("'O' Wins\n");
+        }
+
+        return;
+    }
 
 		if(board[0]!=2 && board[1]!=2 && board[2]!=2 && board[3]!=2 && board[4]!=2 && board[5]!=2 && board[6]!=2 && board[7]!=2 && board[8]!=2) {
-			printf("Game over!");
-			break;
+		    printf("Game over!");
+			  break;
 		}
+
 	}
 }
